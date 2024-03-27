@@ -8,19 +8,21 @@ import Hello from './chapter03/Hello';
 import Hello2 from './chapter03/Hello2';
 import ConfirmDialog from './chapter03/Button';
 import Clock from './chapter04/Clock';
+import CommentList from './chapter05/CommentList';
+import Comment from './chapter05_ex/Comment';
+import First from './chapter05_ex2/First';
+import NotificationList from './chapter06/NotificetionList';
+import Counter from './chapter07/Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// setInterval 함수는 첫 번째 인자로 전달된 함수를 두 번째 인자로 전달된 시간 간격마다 반복적으로 실행
-setInterval(() => {
   root.render(
     <React.StrictMode>
-    <Clock />
+    <Counter />
   </React.StrictMode>
   );
-}, 1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(); 
