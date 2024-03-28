@@ -41,8 +41,9 @@ class Notification extends React.Component {
   }
 
   // render 메서드는 JSX를 반환하여 화면에 표시될 내용을 정의
+  // this.props는 현재 컴포넌트에 전달된 속성(props)을 나타냄
   render() {
-    return (
+      return (
       <div style={styles.wraper}>
         <span style={styles.messeage}>{this.props.message}</span>
       </div>

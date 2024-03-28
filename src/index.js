@@ -12,13 +12,18 @@ import CommentList from './chapter05/CommentList';
 import Comment from './chapter05_ex/Comment';
 import First from './chapter05_ex2/First';
 import NotificationList from './chapter06/NotificetionList';
-import Counter from './chapter07/Counter';
+import Counter2 from './chapter07/Counter2';
+import Accommodate from './chapter07_ex/Accommodate';
+import LikeFeature from './chapter07_ex/Recommend1';
+import LikeFeature1 from './chapter07_ex/Recommend2';
+import Gugudan from './gugudan/Gugudan';
+import Gugufunction from './gugudan/Gugufunction';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
   root.render(
     <React.StrictMode>
-    <Counter />
+    <Gugudan />
   </React.StrictMode>
   );
 
