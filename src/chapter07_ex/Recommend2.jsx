@@ -2,6 +2,8 @@ import useCounter from './useCounter';
 import React from 'react';
 
 function LikeFeature1() {
+  // count는 상태값을 나타내며, 초기값으로 0을 가지고 있음
+  // increaseCount는 count 상태를 증가시키는 함수, decreaseCount는 count 상태를 감소시키는 함수
   const [count, increaseCount, decreaseCount] = useCounter(0);
 
   return (
