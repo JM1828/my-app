@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 
-// useState 훅을 사용하여 word, value, result, score와 각각의 상태를 업데이트하기 위한 함수를 정의
 const WordRelay = () => {
   const [word, setWord] = useState('첫단어');
   const [value, setValue] = useState('');
@@ -15,9 +14,7 @@ const WordRelay = () => {
     document.title = `${score} 점`;
   }, [score]);
 
-  // submit 함수를 정의, 이벤트 객체 e를 매개변수로 받음
   const submit = (e) => {
-    // 일반적으로 form 요소에서 submit 이벤트가 발생했을 때 페이지가 다시 로드되는 동작을 막음
     e.preventDefault();
     // word의 마지막 글자와 value의 첫 글자를 비교하여 끝말잇기 규칙을 확인
     if (word[word.length - 1] === value[0]) {
@@ -50,7 +47,6 @@ const WordRelay = () => {
         }
       });
     }
-    // 특정 DOM 요소에 자동으로 포커스를 설정하는 용도
     inputEl.current.focus();
   };
 

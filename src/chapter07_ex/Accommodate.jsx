@@ -5,7 +5,7 @@ import useCounter from './useCounter';
 
 const MAX_CAPACITY = 10;
 
-function Accommodate(props) {
+function Accommodate() {
   // isFull은 상태값을 나타내며, 초기값으로 false를 가지고 있음, setIsFull은 isFull 상태를 갱신하는 함수
   const [isFull, setIsFull] = useState(false);
   // count는 상태값을 나타내며, 초기값으로 0을 가지고 있음

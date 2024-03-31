@@ -11,16 +11,16 @@ const styles = {
 };
 
 function Login(props) {
-  const { isLoggedIn,onCheckLogin ,onClickLogin, onClickLogout } = props;
+  const { isLoggedIn, onCheckLogin, onClickLogout } = props;
 
   return (
     <div style={styles.wrapper}>
       {isLoggedIn && <span style={styles.greeting}>환영합니다!</span>}
-      {
-      isLoggedIn 
-      ? (<button onClick={onClickLogout}>로그아웃</button>)
-      : (<button onClick={onCheckLogin}>로그인</button>)
-      }
+      {isLoggedIn ? (
+        <button onClick={onClickLogout}>로그아웃</button>
+      ) : (
+        <button onClick={onCheckLogin}>로그인</button>
+      )}
     </div>
   );
 }
