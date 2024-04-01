@@ -17,15 +17,15 @@ function AddPetForm(props) {
     setAge('');
   }
 
-  const handleNameChange = (e) => {
+  const onNameChange = (e) => {
     setName(e.target.value);
   };
 
-  const handlePetChange = (e) => {
+  const onPetChange = (e) => {
     setSpecies(e.target.value);
   };
 
-  const handleAgeChange = (e) => {
+  const onAgeChange = (e) => {
     setAge(e.target.value);
   };
 
@@ -34,15 +34,11 @@ function AddPetForm(props) {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>새 PET 을 추가하기</legend>
-          <input value={name} onChange={handleNameChange} placeholder="이름" />
+          <input value={name} onChange={onNameChange} placeholder="이름" />
           <br />
-          <input
-            value={species}
-            onChange={handlePetChange}
-            placeholder="종류"
-          />
+          <input value={species} onChange={onPetChange} placeholder="종류" />
           <br />
-          <input value={age} onChange={handleAgeChange} placeholder="나이" />
+          <input value={age} onChange={onAgeChange} placeholder="나이" />
           <button>펫 추가</button>
         </fieldset>
       </form>

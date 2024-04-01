@@ -31,7 +31,6 @@ import AttendanceBook from './chapter10_ex/AttendanceBook';
 import FruitSelect from './chapter11/FruitSelect';
 import Reservation from './chapter11/Reservation';
 import SingUp from './chapter11_ex/SingUp';
-import Copyright from './pet/Copyright';
 import App1 from './pet/App1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
