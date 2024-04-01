@@ -8,21 +8,21 @@ function LoginPage2() {
   const [pw, setPw] = useState('');
   const [result, setResult] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const inputID = useRef('');
-  const inputPW = useRef('');
+  const inputId = useRef('');
+  const inputPw = useRef('');
 
   const onCheckLogin = (e) => {
     e.preventDefault();
 
     if (id === '') {
       setResult('아이디를 입력해주세요.');
-      inputID.current.focus();
+      inputId.current.focus();
       return false;
     }
 
     if (pw === '') {
       setResult('비밀번호를 입력해주세요.');
-      inputPW.current.focus();
+      inputPw.current.focus();
       return false;
     }
 
@@ -32,7 +32,7 @@ function LoginPage2() {
       onClickLogout();
       setResult('아이디 또는 비밀번호가 틀렸습니다.');
       // select() 메소드는 해당 입력란의 내용을 선택하여 사용자가 다른 내용을 입력할 수 있도록 도와줌
-      inputPW.current.select();
+      inputPw.current.select();
     }
   };
 
@@ -46,33 +46,35 @@ function LoginPage2() {
   const onClickLogin = () => {
     setIsLoggedIn(true);
   };
-  const onClickLogout = () => setIsLoggedIn(false);
+  const onClickLogout = () => {
+    setIsLoggedIn(false);
+  };
 
   return (
     <div>
-      {isLoggedIn ? (
-        <div>
-          <p>{USER_ID} 님 반갑습니다!</p>
-          <button onClick={onClickLogout}>로그아웃</button>
-        </div>
-      ) : (
-        <form onSubmit={onCheckLogin}>
-          <p>
-            아이디 : {''}
-            <input type="text" ref={inputID} value={id} onChange={onChangeId} />
-          </p>
-          <p>
-            비밀번호 : {''}
-            <input
-              type="password"
-              ref={inputPW}
-              value={pw}
-              onChange={onChangepw}
-            />
-          </p>
-          <button type="submit">로그인</button>
-          <div>{result}</div>
-        </form>
+      {!isLoggedIn && (
+        <>
+          <form onSubmit={onCheckLogin}>
+            <p>
+              아이디 : <input ref={inputId} type="text" onChange={onChangeId} />
+            </p>
+            <p>
+              비밀번호 :{' '}
+              <input ref={inputPw} type="password" onChange={onChangepw} />
+            </p>
+            <button>로그인</button>
+          </form>
+          <p style={{ color: 'red' }}>{result}</p>
+        </>
+      )}
+
+      {isLoggedIn && (
+        <>
+          <div style={{ padding: 16 }}>{id} 님 어서오세요!!!</div>
+          <div>
+            <button onClick={onClickLogout}>로그아웃</button>
+          </div>
+        </>
       )}
     </div>
   );

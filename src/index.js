@@ -26,12 +26,19 @@ import LoginControl from './chapter09/LoginControl';
 import MainPage from './chapter09/MainPage';
 import LoginPage from './chapter09_ex/LoginPage';
 import LoginPage2 from './chapter09_ex/LoginPage2';
+import NumberList from './chapter10/NumberList';
+import AttendanceBook from './chapter10_ex/AttendanceBook';
+import FruitSelect from './chapter11/FruitSelect';
+import Reservation from './chapter11/Reservation';
+import SingUp from './chapter11_ex/SingUp';
+import Copyright from './pet/Copyright';
+import App1 from './pet/App1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <LoginPage2 />
+    <App1 />
   </React.StrictMode>
 );
 
