@@ -32,12 +32,15 @@ import FruitSelect from './chapter11/FruitSelect';
 import Reservation from './chapter11/Reservation';
 import SingUp from './chapter11_ex/SingUp';
 import App1 from './pet/App1';
+import Diary from './Diary_default/Diary';
+import Calculator from './chapter12/Calculator';
+import ProfileCard from './chapter13/ProfileCard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <App1 />
+    <ProfileCard />
   </React.StrictMode>
 );
 
