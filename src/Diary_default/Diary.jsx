@@ -2,6 +2,7 @@ import './Diary.css';
 import { useState, useReducer, createContext, useMemo } from 'react';
 import DiaryList from './DiaryList';
 import DiaryEditor from './DiaryEditor';
+import { v4 as uuidv4 } from 'uuid';
 
 // createContext 함수를 사용하여 TodoStateContext라는 새로운 context 객체를 생성
 
@@ -50,7 +51,7 @@ function Diary() {
     dispatch({
       type: 'CREATE',
       dates: {
-        id: new Date(),
+        id: uuidv4(),
         author: author,
         content: content,
         emotion: emotion,

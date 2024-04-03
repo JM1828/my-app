@@ -30,17 +30,21 @@ import NumberList from './chapter10/NumberList';
 import AttendanceBook from './chapter10_ex/AttendanceBook';
 import FruitSelect from './chapter11/FruitSelect';
 import Reservation from './chapter11/Reservation';
-import SingUp from './chapter11_ex/SingUp';
+import SingUp1 from './chapter11_ex/SingUp';
 import App1 from './pet/App1';
 import Diary from './Diary_default/Diary';
 import Calculator from './chapter12/Calculator';
 import ProfileCard from './chapter13/ProfileCard';
+import MainContent from './chapter14/MainContent';
+import DarkOrLight from './chapter14/DarkOrLight';
+import SingUp from './chapter14/SingUp';
+import LoginPage3 from './chapter14/LoginPage3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <ProfileCard />
+    <LoginPage3 />
   </React.StrictMode>
 );
 

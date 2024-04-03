@@ -4,6 +4,7 @@ import { TodoStateContext } from './Diary';
 
 function DiaryList() {
   const data = useContext(TodoStateContext);
+  console.log(data);
 
   return (
     <div className="DiaryList">

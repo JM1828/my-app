@@ -1,18 +1,22 @@
 import { useState, useContext } from 'react';
 import { TodoDispatchContext } from './Diary';
 
+// uuid 사용
+// 1. 설치 - npm install uuid
+// 2. 선언 - imprort { v4 uuidv4 } from "uuid"
+// 3. 사용 - uuiv4()
 function DiaryEditor() {
-  const {onCreate} = useContext(TodoDispatchContext);
+  const { onCreate } = useContext(TodoDispatchContext);
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
-  const [emotion, setEmotion] = useState("1");
+  const [emotion, setEmotion] = useState('1');
 
   const onSubmit = (e) => {
     e.preventDefault();
     onCreate(author, content, emotion);
     setAuthor('');
     setContent('');
-    setEmotion("1");
+    setEmotion('1');
   };
 
   const onChangeAuthor = (e) => {
